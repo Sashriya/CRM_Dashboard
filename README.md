@@ -10,7 +10,7 @@ ai-crm-fullstack/
 
 ## Quick Start
 
-### 1. Backend
+### Backend
 
 ```bash
 cd server
@@ -20,41 +20,16 @@ cp .env.example .env
 
 Edit `server/.env`:
 ```env
-PORT=8000
-MONGO_URI=mongodb://127.0.0.1:27017/ai-crm-dashboard
+PORT=your_port_number
+MONGO_URI=mongodb://127.0.0.1:27017/your_mongodb_database_name
 JWT_SECRET=replace_with_a_long_random_secret
 GROQ_API_KEY=your_groq_api_key_here     # https://console.groq.com/keys
-CLIENT_URL=http://localhost:5173
+CLIENT_URL=your_server_number
 ```
 
-```bash
-npm run dev
-```
+### Use it
 
-Server runs at `http://localhost:8000`.
-
-### 2. Frontend
-
-```bash
-cd client
-npm install
-cp .env.example .env
-```
-
-`client/.env` should point at your backend:
-```env
-VITE_API_URL=http://localhost:8000/api
-```
-
-```bash
-npm run dev
-```
-
-App runs at `http://localhost:5173`.
-
-### 3. Use it
-
-1. Open `http://localhost:5173`
+1. Open `http://localhost:server_number`
 2. Create an account (Register page)
 3. Add contacts, leads, deals, and tasks
 4. Click the AI score ring on any lead to get a Groq-powered score + rationale
